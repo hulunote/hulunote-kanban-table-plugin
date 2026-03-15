@@ -2,6 +2,8 @@
 
 Official example plugin for the **Hulunote Plugin System**. Adds Table and Kanban board components to outlines.
 
+> **Plugin Development Guide:** See [Hulunote Plugin Development Guide](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md) for the full documentation on how to create your own plugins.
+
 ## Usage
 
 ### Table
@@ -57,6 +59,8 @@ You can also create a **`hulunote/css`** note for additional CSS. Each child blo
 - A URL (`/path/to/file.js`, `https://cdn.example.com/plugin.js`)
 - Inline code (directly written in the block)
 
+> For more details on how `hulunote/javascript` and `hulunote/css` notes work, see the [Plugin Development Guide](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md#how-plugins-are-loaded).
+
 ## Plugin API
 
 This plugin uses the `window.HulunotePlugin` API:
@@ -79,9 +83,16 @@ window.HulunotePlugin.register({
 
 Block content pattern: `{{renderer-name}}` triggers the matching renderer.
 
+> For the full API reference (RenderContext, lifecycle hooks, data structures), see the [Plugin Development Guide](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md#plugin-api-reference).
+
 ## Development
 
 ```bash
 npm run dev   # Watch mode (TypeScript only)
 npm run build # Full build (TypeScript + bundle)
 ```
+
+## Related Links
+
+- [Hulunote Plugin Development Guide](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md) — Full documentation on the plugin system
+- [Hulunote](https://github.com/hulunote/hulunote) — The main Hulunote project
