@@ -57,7 +57,25 @@ Then in Hulunote, create a note titled **`hulunote/javascript`** and add a child
 
 You can also create a **`hulunote/css`** note for additional CSS. Each child block is either:
 - A URL (`/path/to/file.js`, `https://cdn.example.com/plugin.js`)
-- Inline code (directly written in the block)
+- Inline code (directly written in the block, or wrapped in ``` for a CodeMirror editor)
+
+### Inline Code with CodeMirror
+
+For inline plugin code, wrap it in ``` fences to get a **CodeMirror editor** with syntax highlighting:
+
+    ```js
+    window.HulunotePlugin.register({
+      name: 'my-inline-plugin',
+      version: '1.0.0',
+      renderers: {
+        greeting: function(ctx) {
+          ctx.container.innerHTML = '<b>Hello from inline plugin!</b>';
+        }
+      }
+    });
+    ```
+
+The fences are automatically stripped before execution. See [Code Blocks with CodeMirror](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md#code-blocks-with-codemirror) for details.
 
 > For more details on how `hulunote/javascript` and `hulunote/css` notes work, see the [Plugin Development Guide](https://github.com/hulunote/hulunote/blob/master/docs/plugin-development.md#how-plugins-are-loaded).
 
