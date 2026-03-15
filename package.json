@@ -1,0 +1,16 @@
+{
+  "name": "hulunote-kanban-table-plugin",
+  "version": "1.0.0",
+  "description": "Official Hulunote plugin example: Table and Kanban board components for outlines",
+  "main": "dist/hulunote-kanban-table-plugin.js",
+  "scripts": {
+    "build": "tsc && node build.mjs",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["hulunote", "plugin", "kanban", "table", "outline"],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "esbuild": "^0.20.0"
+  }
+}
