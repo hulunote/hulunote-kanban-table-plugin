@@ -41,11 +41,21 @@ npm install
 npm run build
 ```
 
-Then add the built file to your Hulunote page:
+Copy the built file to Hulunote's public directory:
 
-```html
-<script src="dist/hulunote-kanban-table-plugin.js"></script>
+```bash
+cp dist/hulunote-kanban-table-plugin.js /path/to/hulunote/resources/public/plugins/
 ```
+
+Then in Hulunote, create a note titled **`hulunote/javascript`** and add a child block:
+
+```
+/plugins/hulunote-kanban-table-plugin.js
+```
+
+You can also create a **`hulunote/css`** note for additional CSS. Each child block is either:
+- A URL (`/path/to/file.js`, `https://cdn.example.com/plugin.js`)
+- Inline code (directly written in the block)
 
 ## Plugin API
 
